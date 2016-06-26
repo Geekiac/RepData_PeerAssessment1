@@ -13,7 +13,7 @@ unzip("activity.zip", "activity.csv")
 activity <- read.csv("activity.csv")
 ```
 Now we "clean" the data by converting the date string in the date column to the Date class.
-```{r echo=TRUE, warning=FALSE}
+```{r echo=TRUE, message=FALSE}
 library(dplyr)
 library(lubridate)
 activity <- mutate(activity, date=ymd(date))

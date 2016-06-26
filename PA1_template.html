@@ -125,22 +125,9 @@ $(document).ready(function () {
 <pre class="r"><code>unzip(&quot;activity.zip&quot;, &quot;activity.csv&quot;)
 activity &lt;- read.csv(&quot;activity.csv&quot;)</code></pre>
 <p>Now we “clean” the data by converting the date string in the date column to the Date class.</p>
-<pre class="r"><code>library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: 'dplyr'</code></pre>
-<pre><code>## The following objects are masked from 'package:stats':
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>library(lubridate)</code></pre>
-<pre><code>## 
-## Attaching package: 'lubridate'</code></pre>
-<pre><code>## The following object is masked from 'package:base':
-## 
-##     date</code></pre>
-<pre class="r"><code>activity &lt;- mutate(activity, date=ymd(date))</code></pre>
+<pre class="r"><code>library(dplyr)
+library(lubridate)
+activity &lt;- mutate(activity, date=ymd(date))</code></pre>
 <p>This shows the structure and summary of the processed/transformed data.</p>
 <pre class="r"><code>str(activity)</code></pre>
 <pre><code>## 'data.frame':    17568 obs. of  3 variables:

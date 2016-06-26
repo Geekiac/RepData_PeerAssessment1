@@ -12,41 +12,7 @@ Now we "clean" the data by converting the date string in the date column to the 
 
 ```r
 library(dplyr)
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 library(lubridate)
-```
-
-```
-## 
-## Attaching package: 'lubridate'
-```
-
-```
-## The following object is masked from 'package:base':
-## 
-##     date
-```
-
-```r
 activity <- mutate(activity, date=ymd(date))
 ```
 This shows the structure and summary of the processed/transformed data.
